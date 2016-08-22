@@ -1,35 +1,42 @@
+#include <stdlib.h>
 #include <stdio.h>
+#include <math.h>
 
 int main(void)
 {
-	char url[]="notas.txt";
-	float nota,
-	      media=0.0;
-	FILE *arq;
+    char ch1[100];
+    FILE *inicial;
 
-	arq = fopen(url, "w");
-	if(arq == NULL)
-			printf("Erro, nao foi possivel abrir o arquivo\n");
-	else{
-		printf("Nota de Matematica: ");
-		scanf("%f", &nota);
-		fprintf(arq, "Matematica: %.2f\n", nota);
-		media+=nota;
+    inicial=fopen("aulas.txt", "w");
 
-		printf("Nota de Fisica: ");
-		scanf("%f", &nota);
-		fprintf(arq, "Fisica: %.2f\n", nota);
-		media+=nota;
 
-		printf("Nota de Quimica: ");
-		scanf("%f", &nota);
-		fprintf(arq, "Quimica: %.2f\n", nota);
-		media+=nota;
 
-		media /= 3;
-		fprintf(arq, "Media final: %.2f\n", media);
-	}
-	fclose(arq);
+    printf("Insira o seu curso: \n");
+    gets(ch1);
+    fputs(ch1, inicial);
+    fputc('|', inicial);
+    printf("Insira a Materia: \n");
+    gets(ch1);
+    fputs(ch1, inicial);
+    fputc('|', inicial);
+    printf("Insira o dia e o mes em que a aula sera ministrada: \n");
+    gets(ch1);
+    fputs(ch1, inicial);
+    fputc('|', inicial);
+    printf("Insira o Horario: \n");
+    gets(ch1);
+    fputs(ch1, inicial);
+    fputc('|', inicial);
+    printf("Insira o seu nome: \n");
+    gets(ch1);
+    fputs(ch1, inicial);
+    fputc('|', inicial);
+    printf("Insira o Local de aula: \n");
+    gets(ch1);
+    fputs(ch1, inicial);
+    fputc('|', inicial);
+
+    fclose(inicial);
 
 	return 0;
 }
