@@ -2,16 +2,16 @@
 
 int main()
 {
-    char nomeDoArquivoParaLer[100], teste[10][1000][10000];
-    gets(nomeDoArquivoParaLer);
-    teste = lerArquivo(nomeDoArquivoParaLer);
+    char nomeDoArquivoParaLer[100], teste[100][100][100];
+    scanf("%s", &nomeDoArquivoParaLer);
+    lerArquivo(nomeDoArquivoParaLer);
 }
 
 /*
 FAZER RETORNO DA MATRIZ arquivoLido[][][] para a variavel teste da funcao main
 */
 
-char lerArquivo(char arquivoParaLer[100])
+void lerArquivo(char arquivoParaLer[100])
 {
     int cont = 0, cont1 = 0, cont2 = 0, maxLinhas = 0, maxColunas = 0;
     FILE *arq;
@@ -45,6 +45,7 @@ char lerArquivo(char arquivoParaLer[100])
             printf("%c", ch);
         }
     fclose(arq);
+
     printf("\n\n");
     for(cont = 0; cont <= maxColunas; cont++)
     {
@@ -54,5 +55,6 @@ char lerArquivo(char arquivoParaLer[100])
         }
         printf("\n");
     }
-    return arquivoLido;
+
+    /*return arquivoLido;*/
 }
