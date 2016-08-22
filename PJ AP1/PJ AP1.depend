@@ -1,5 +1,7 @@
 # depslib dependency file v1.0
-1471829437 source:c:\users\luís guilherme\desktop\ap1\pj ap1\projeto.c
+1471841119 source:c:\users\luís guilherme\desktop\ap1\pj ap1\projeto.c
 	<stdlib.h>
 	<stdio.h>
+	<math.h>
+	<locale.h>
 
